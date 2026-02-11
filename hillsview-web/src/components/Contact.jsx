@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Phone, ShieldCheck } from 'lucide-react';
 
 function Contact() {
+  // --- CAPTCHA LOGIC START ---
+  const [captcha, setCaptcha] = useState({ question: '', answer: null });
+  const [userAnswer, setUserAnswer] = useState('');
+
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 10) + 1;
+    const num2 = Math.floor(Math.random() * 10) + 1;
+    setCaptcha({
+      question: `What is ${num1} + ${num2}?`,
+      answer: num1 + num2
+    });
+  };
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (parseInt(userAnswer) === captcha.answer) {
+      alert("Verification successful! Form submitted.");
+      // Add your form submission logic here
+    } else {
+      alert("Incorrect security answer. Please try again.");
+      generateCaptcha();
+      setUserAnswer('');
+    }
+  };
+  // --- CAPTCHA LOGIC END ---
+
   return (
     <section
       id="contact"
@@ -17,7 +47,6 @@ function Contact() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        {/* GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* LEFT COLUMN */}
           <div className="space-y-8 md:space-y-10 text-white reveal-up">
@@ -53,13 +82,14 @@ function Contact() {
               The &quot;Reach Us&quot; Approach
             </h3>
 
-            <form className="space-y-6" id="booking-form">
+            <form className="space-y-6" id="booking-form" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-luxury-sub uppercase tracking-wider">
                     First Name
                   </label>
                   <input
+                    required
                     type="text"
                     className="w-full bg-luxury-cream border-b-2 border-luxury-sand p-3 focus:outline-none focus:border-luxury-teal transition-colors"
                     placeholder="John"
@@ -70,6 +100,7 @@ function Contact() {
                     Last Name
                   </label>
                   <input
+                    required
                     type="text"
                     className="w-full bg-luxury-cream border-b-2 border-luxury-sand p-3 focus:outline-none focus:border-luxury-teal transition-colors"
                     placeholder="Doe"
@@ -82,6 +113,7 @@ function Contact() {
                   Phone Number
                 </label>
                 <input
+                  required
                   type="tel"
                   className="w-full bg-luxury-cream border-b-2 border-luxury-sand p-3 focus:outline-none focus:border-luxury-teal transition-colors"
                   placeholder="+91 90000 00000"
@@ -106,15 +138,14 @@ function Contact() {
                   <ShieldCheck className="w-4 h-4 text-luxury-gold" />
                 </label>
                 <div className="bg-luxury-cream/50 p-4 rounded-xl border border-luxury-sand">
-                  <p
-                    id="captcha-question"
-                    className="font-serif text-lg text-luxury-teal italic mb-3"
-                  >
-                    Loading question...
+                  <p className="font-serif text-lg text-luxury-teal italic mb-3">
+                    {captcha.question || "Loading question..."}
                   </p>
                   <input
-                    type="text"
-                    id="captcha-input"
+                    required
+                    type="number"
+                    value={userAnswer}
+                    onChange={(e) => setUserAnswer(e.target.value)}
                     className="w-full bg-white border-b-2 border-luxury-sand p-3 focus:outline-none focus:border-luxury-teal transition-colors"
                     placeholder="Type your answer here"
                   />
