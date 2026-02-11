@@ -34,7 +34,7 @@ function Hero() {
       <div className="container mt-[52px] lg:mt-[0px] mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Left text */}
         <div className="left-secvtionstyle order-1 lg:order-1 relative z-10 space-y-8 reveal-up active flex flex-col justify-center lg:block text-center lg:text-left">
-          <div className="sm:pt-[80px] space-y-4 mobikle-responsivesection">
+          <div className="sm:pt-[30px] space-y-4 mobikle-responsivesection">
             <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-luxury-text font-bold leading-none tracking-tight whitespace-nowrap">
               Hillsview{' '}
               <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans font-light uppercase tracking-[0.1em] text-luxury-teal inline-block ml-2">
@@ -330,4 +330,5 @@ function Hero() {
 }
 
 export default Hero;
+
 
