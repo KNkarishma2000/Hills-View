@@ -8,6 +8,20 @@ function Hero() {
       id="top"
       className="relative min-h-screen flex pb-20 items-center justify-center pt-20 lg:pt-24 overflow-hidden"
     >
+      <div className="absolute left-10 bottom-20 opacity-20 pointer-events-none animate-float-delayed hidden md:block z-10" style={{ transform: 'translateY(-15px)' }}>
+          <svg width="200" height="200" viewBox="0 0 100 100" stroke="#BFA15F" fill="none" strokeWidth="0.5">
+              <circle cx="50" cy="50" r="45"></circle>
+              <circle cx="50" cy="50" r="40"></circle>
+              <path d="M50 50 L50 20"></path>
+              <path d="M50 50 L70 60"></path>
+              <rect x="45" y="0" width="10" height="5"></rect>
+          </svg>
+      </div>
+
+      <div
+        className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-luxury-sand/40 via-luxury-cream to-luxury-cream parallax-bg"
+        data-speed="0.05"
+      />
       <div
         className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-luxury-sand/40 via-luxury-cream to-luxury-cream parallax-bg"
         data-speed="0.05"
@@ -20,7 +34,7 @@ function Hero() {
       <div className="container mt-[52px] lg:mt-[0px] mx-auto px-6 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
         {/* Left text */}
         <div className="left-secvtionstyle order-1 lg:order-1 relative z-10 space-y-8 reveal-up active flex flex-col justify-center lg:block text-center lg:text-left">
-          <div className="sm:pt-[30px] space-y-4 mobikle-responsivesection">
+          <div className="sm:pt-[80px] space-y-4 mobikle-responsivesection">
             <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-luxury-text font-bold leading-none tracking-tight whitespace-nowrap">
               Hillsview{' '}
               <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-sans font-light uppercase tracking-[0.1em] text-luxury-teal inline-block ml-2">
@@ -289,7 +303,7 @@ function Hero() {
 
     {/* Floating card – with icon and better positioning */}
     <div
-      className="absolute floating-point -bottom-20 -left-10 sm:left-8 md:-left-85 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
+      className="absolute floating-point -bottom-14 -left-10 sm:left-8 md:-left-78 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
       style={{ animationDelay: '1s' }}
     >
       <div className="flex items-center gap-3 sm:gap-4">
@@ -316,6 +330,3 @@ function Hero() {
 }
 
 export default Hero;
-
-
-
