@@ -289,7 +289,7 @@ function Hero() {
 
     {/* Floating card – with icon and better positioning */}
     <div
-      className="absolute floating-point -bottom-14 -left-10 sm:left-8 md:-left-85 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
+      className="absolute floating-point -bottom-20 -left-10 sm:left-8 md:-left-85 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
       style={{ animationDelay: '1s' }}
     >
       <div className="flex items-center gap-3 sm:gap-4">
@@ -316,4 +316,5 @@ function Hero() {
 }
 
 export default Hero;
+
 
