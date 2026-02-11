@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react'; // Removed useEffect
 import { ChevronLeft, ChevronRight, BookOpen, Armchair, Brain, Stethoscope } from 'lucide-react';
 
 const TEAM_MEMBERS = [
@@ -54,8 +54,8 @@ const TEAM_MEMBERS = [
 
 function Team() {
   const scrollRef = useRef(null);
-  const autoScrollRef = useRef(null);
 
+  // Manual scroll function remains
   const scrollTeam = dir => {
     const container = scrollRef.current;
     if (!container) return;
@@ -63,35 +63,14 @@ function Team() {
     container.scrollBy({ left: dir === 'left' ? -amount : amount, behavior: 'smooth' });
   };
 
-  const stopAutoScroll = () => {
-    if (autoScrollRef.current) {
-      clearInterval(autoScrollRef.current);
-      autoScrollRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-    autoScrollRef.current = setInterval(() => {
-      scrollTeam('right');
-    }, 6000);
-    return () => {
-      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
-    };
-  }, []);
+  /* REMOVED: autoScrollRef
+     REMOVED: stopAutoScroll 
+     REMOVED: useEffect (the part that sets the interval)
+  */
 
   return (
     <>
-      {/* TEAM SECTION */}
-     <section id="team" className="py-16 md:py-24 bg-luxury-cream relative overflow-hidden">
-        {/* Background SVGs preserved for your styling */}
-        <div className="absolute left-10 top-15 opacity-10 pointer-events-none transform -rotate-6 parallax-bg" data-speed="0.05">
-          <svg width="200" height="200" viewBox="0 0 100 100" fill="none" stroke="#BFA15F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M20 85 Q 50 100 80 85" /><path d="M30 88 L 35 60" /><path d="M70 88 L 65 60" /><path d="M35 60 L 65 60" /><path d="M35 60 L 30 20" /><path d="M65 60 L 70 20" /><path d="M30 20 L 70 20" /><path d="M42 60 L 40 20" /><path d="M50 60 L 50 20" /><path d="M58 60 L 60 20" /><path d="M33 45 C 25 45, 25 60, 35 60" /><path d="M67 45 C 75 45, 75 60, 65 60" />
-          </svg>
-        </div>
-
+      <section id="team" className="py-16 md:py-24 bg-luxury-cream relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-10 md:mb-16 reveal-up relative">
             <h2 className="font-serif text-4xl md:text-5xl text-luxury-text mb-4">Our Leadership Team</h2>
@@ -99,7 +78,6 @@ function Team() {
           </div>
 
           <div className="relative group" id="team-slider-wrapper">
-            {/* Left Button - Cleaned up to only call scrollTeam */}
             <button
               onClick={() => scrollTeam('left')}
               className="lg:block absolute left-0 top-1/2 -translate-y-1/2 z-20 -ml-4 lg:-ml-12 bg-white text-luxury-teal p-3 rounded-full shadow-lg border border-luxury-sand hover:bg-luxury-teal hover:text-white transition-all focus:opacity-100"
@@ -131,7 +109,6 @@ function Team() {
               ))}
             </div>
 
-            {/* Right Button - Cleaned up to only call scrollTeam */}
             <button
               onClick={() => scrollTeam('right')}
               className="lg:block absolute right-0 top-1/2 -translate-y-1/2 z-20 -mr-4 lg:-mr-12 bg-white text-luxury-teal p-3 rounded-full shadow-lg border border-luxury-sand hover:bg-luxury-teal hover:text-white transition-all focus:opacity-100"
