@@ -1,0 +1,22 @@
+/* index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+
+@layer base {
+  body {
+    /* Use !important ONLY if you can't find where Playfair is coming from */
+    @apply font-sans bg-luxury-cream text-luxury-text;
+    font-family: "Plus Jakarta Sans", sans-serif; 
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    /* This forces all headers to use your serif choice */
+    font-family: "Cormorant Garamond", serif !important;
+  }
+}
