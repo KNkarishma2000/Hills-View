@@ -74,17 +74,22 @@ function Hero() {
         </div>
 
         {/* Right SVG Tree – copy your SVG JSX here 1:1 with self‑closing tags */}
-       <div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative reveal-up active gap-6">
-  {/* Tree Illustration - PARALLAX EFFECT */}
-  <div className="relative w-[300px] sm:w-[380px] h-full sm:h-[550px] parallax-bg" data-speed="-0.08">
+      {/* Right: Tree + floating card */}
+<div className="order-2 lg:order-2 flex justify-center lg:justify-end items-center relative reveal-up active gap-6">
+  <div
+    className="relative w-[260px] sm:w-[320px] md:w-[360px] lg:w-[380px] h-[420px] sm:h-[500px] lg:h-[550px] parallax-bg"
+    data-speed="-0.08"
+  >
+    {/* Blobby background */}
     <div className="absolute inset-0 bg-luxury-gold/10 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] animate-float blur-xl" />
 
+    {/* Tree SVG */}
     <svg
       className="relative z-10 w-full h-full drop-shadow-xl"
       viewBox="0 0 400 700"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Trunk and Main Structure */}
+      {/* trunk */}
       <path
         d="M200,600 Q190,500 200,400"
         stroke="#8DA399"
@@ -92,9 +97,7 @@ function Hero() {
         fill="none"
         strokeLinecap="round"
       />
-
-      {/* Lower Stem Branches (High Dependency & Palliative) */}
-      {/* Left branch */}
+      {/* lower branches */}
       <path
         d="M200,480 Q170,460 140,440"
         stroke="#8DA399"
@@ -102,7 +105,6 @@ function Hero() {
         fill="none"
         strokeLinecap="round"
       />
-      {/* Right branch */}
       <path
         d="M200,480 Q260,460 300,440"
         stroke="#8DA399"
@@ -110,8 +112,7 @@ function Hero() {
         fill="none"
         strokeLinecap="round"
       />
-
-      {/* Upper Branches (Lifestyle Circles) */}
+      {/* upper branches */}
       <path
         d="M200,400 Q120,320 80,240"
         stroke="#8DA399"
@@ -134,7 +135,7 @@ function Hero() {
         strokeLinecap="round"
       />
 
-      {/* Stem Left: High Dependency */}
+      {/* left stem node */}
       <g className="leaf-sway" style={{ transformOrigin: '140px 440px', animationDelay: '0.5s' }}>
         <text
           x="130"
@@ -161,7 +162,7 @@ function Hero() {
         <circle cx="140" cy="440" r="6" fill="#2C5F58" />
       </g>
 
-      {/* Stem Right: Palliative Care */}
+      {/* right stem node */}
       <g className="leaf-sway" style={{ transformOrigin: '300px 440px', animationDelay: '0.8s' }}>
         <text
           x="310"
@@ -188,10 +189,9 @@ function Hero() {
         <circle cx="300" cy="440" r="6" fill="#2C5F58" />
       </g>
 
-      {/* TOP NODES (3 Circles) */}
-      {/* Left Circle: Low Care */}
+      {/* left top circle */}
       <g className="leaf-sway" style={{ transformOrigin: '80px 240px', animationDelay: '1.2s' }}>
-        <circle cx="80" cy="240" r="60" fill="#BFA15F" opacity="1" />
+        <circle cx="80" cy="240" r="60" fill="#BFA15F" />
         <text
           x="80"
           y="235"
@@ -216,9 +216,9 @@ function Hero() {
         </text>
       </g>
 
-      {/* Center Circle: Resort Living */}
+      {/* center top circle */}
       <g className="leaf-sway" style={{ transformOrigin: '200px 180px', animationDelay: '1.8s' }}>
-        <circle cx="200" cy="180" r="75" fill="#2C5F58" opacity="1" />
+        <circle cx="200" cy="180" r="75" fill="#2C5F58" />
         <text
           x="200"
           y="175"
@@ -243,9 +243,9 @@ function Hero() {
         </text>
       </g>
 
-      {/* Right Circle: High Care */}
+      {/* right top circle */}
       <g className="leaf-sway" style={{ transformOrigin: '320px 240px', animationDelay: '2.2s' }}>
-        <circle cx="320" cy="240" r="60" fill="#8DA399" opacity="1" />
+        <circle cx="320" cy="240" r="60" fill="#8DA399" />
         <text
           x="320"
           y="235"
@@ -270,7 +270,7 @@ function Hero() {
         </text>
       </g>
 
-      {/* Tree of Life Label */}
+      {/* Tree of Life label */}
       <text
         x="200"
         y="650"
@@ -287,15 +287,14 @@ function Hero() {
       </text>
     </svg>
 
-    {/* Floating Card */}
+    {/* Floating card – with icon and better positioning */}
     <div
-      className="absolute floating-point -bottom-10 -left-21 z-30 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
+      className="absolute floating-point -bottom-14 -left-10 sm:left-8 md:-left-78 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
       style={{ animationDelay: '1s' }}
     >
       <div className="flex items-center gap-3 sm:gap-4">
         <div className="bg-gradient-to-br from-luxury-teal to-[#1a3d38] p-3 sm:p-3.5 rounded-xl text-white shadow-lg shadow-teal-900/20 ring-1 ring-white/50 shrink-0">
-          {/* if you want, put a Lucide icon here */}
-          {/* <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" /> */}
+          <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
         <div>
           <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-luxury-gold mb-1 leading-tight">
@@ -309,6 +308,7 @@ function Hero() {
     </div>
   </div>
 </div>
+
 
       </div>
     </header>
