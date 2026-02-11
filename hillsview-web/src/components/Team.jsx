@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'; // Removed useEffect
+import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, BookOpen, Armchair, Brain, Stethoscope } from 'lucide-react';
 
 const TEAM_MEMBERS = [
@@ -55,26 +55,45 @@ const TEAM_MEMBERS = [
 function Team() {
   const scrollRef = useRef(null);
 
-  // Manual scroll function remains
-  const scrollTeam = dir => {
+  const scrollTeam = (dir) => {
     const container = scrollRef.current;
     if (!container) return;
     const amount = container.clientWidth * 0.8;
     container.scrollBy({ left: dir === 'left' ? -amount : amount, behavior: 'smooth' });
   };
 
-  /* REMOVED: autoScrollRef
-     REMOVED: stopAutoScroll 
-     REMOVED: useEffect (the part that sets the interval)
-  */
-
   return (
     <>
+      {/* TEAM SECTION */}
       <section id="team" className="py-16 md:py-24 bg-luxury-cream relative overflow-hidden">
+        
+        {/* ICON 1: Rocking Chair (Top Left) */}
+        <div className="absolute left-10 top-15 opacity-10 pointer-events-none transform -rotate-6 parallax-bg" data-speed="0.05">
+          <svg width="200" height="200" viewBox="0 0 100 100" fill="none" stroke="#BFA15F" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M20 85 Q 50 100 80 85" /><path d="M30 88 L 35 60" /><path d="M70 88 L 65 60" /><path d="M35 60 L 65 60" /><path d="M35 60 L 30 20" /><path d="M65 60 L 70 20" /><path d="M30 20 L 70 20" /><path d="M42 60 L 40 20" /><path d="M50 60 L 50 20" /><path d="M58 60 L 60 20" /><path d="M33 45 C 25 45, 25 60, 35 60" /><path d="M67 45 C 75 45, 75 60, 65 60" />
+          </svg>
+        </div>
+
+        {/* ICON 2: Spectacles/Glasses (Bottom Right) */}
+        <div className="absolute right-10 bottom-20 opacity-10 pointer-events-none transform rotate-12 parallax-bg" data-speed="-0.05">
+             <svg width="250" height="100" viewBox="0 0 200 80" fill="none" stroke="#2C5F58" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="50" cy="40" r="25" />
+                <circle cx="150" cy="40" r="25" />
+                <path d="M75 40 Q100 20 125 40" />
+                <path d="M25 40 L5 30" />
+                <path d="M175 40 L195 30" />
+            </svg>
+        </div>
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-10 md:mb-16 reveal-up relative">
             <h2 className="font-serif text-4xl md:text-5xl text-luxury-text mb-4">Our Leadership Team</h2>
             <p className="text-base md:text-lg text-luxury-sub">A distinguished panel committed to excellence in care</p>
+            
+            {/* ICON 3: Open Book (Near Header) */}
+            <div className="absolute top-50 right-0 lg:right-40 opacity-20 parallax-bg" data-speed="0.1">
+                <BookOpen className="w-24 h-24 text-luxury-gold" />
+            </div>
           </div>
 
           <div className="relative group" id="team-slider-wrapper">
