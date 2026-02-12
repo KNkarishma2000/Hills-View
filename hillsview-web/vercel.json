@@ -1,0 +1,16 @@
+{
+ "redirects": [
+ {
+ "source": "/(.*)",
+ "has": [{ "type": "host", "value": "www.hillsviewassistedliving.com" }],
+ "destination": "https://hval.co.in/$1",
+ "permanent": true
+ },
+ {
+ "source": "/(.*)",
+ "has": [{ "type": "host", "value": "hillsviewassistedliving.com" }],
+ "destination": "https://hval.co.in/$1",
+ "permanent": true
+ }
+ ]
+}
