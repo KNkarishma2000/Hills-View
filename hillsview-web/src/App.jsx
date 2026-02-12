@@ -13,6 +13,31 @@ import Contact from './components/Contact.jsx';
 
 function App() {
   useEffect(() => {
+  const handleContextMenu = (e) => {
+    e.preventDefault(); // This prevents the right-click menu from appearing
+  };
+
+  const handleKeyDown = (e) => {
+    // Optional: Disable common Inspect Element keyboard shortcuts
+    if (
+      e.key === 'F12' || 
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) || 
+      (e.ctrlKey && e.key === 'U')
+    ) {
+      e.preventDefault();
+    }
+  };
+
+  document.addEventListener('contextmenu', handleContextMenu);
+  document.addEventListener('keydown', handleKeyDown);
+
+  // Clean up the listeners when the component unmounts
+  return () => {
+    document.removeEventListener('contextmenu', handleContextMenu);
+    document.removeEventListener('keydown', handleKeyDown);
+  };
+}, []);
+  useEffect(() => {
     // init Lenis smooth scroll
     const lenis = new Lenis({
       duration: 1.5,
@@ -35,6 +60,8 @@ function App() {
       lenis.destroy();
     };
   }, []);
+
+
 useEffect(() => {
   const observerOptions = {
     threshold: 0.1, // Trigger when 10% of the element is visible

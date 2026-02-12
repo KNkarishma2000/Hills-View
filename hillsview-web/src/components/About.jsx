@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ABOUT from '../assets/aboutus.jpeg'
 function About() {
   return (
 
@@ -9,7 +9,7 @@ function About() {
           <div className="md:w-1/2 relative reveal-up">
             <div className="w-full aspect-[4/3] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-xl">
               <img
-                src="https://hillsviewassistedliving.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-12-at-9.28.21-AM.jpeg"
+                src={ABOUT}
                 alt="Comfortable Living"
                 className="w-full h-full object-cover"
               />

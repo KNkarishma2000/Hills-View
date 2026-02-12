@@ -79,34 +79,35 @@ const CompassOfCare = () => {
             </div>
 
             {/* Nodes with responsive positioning */}
-            <CompassNode 
-              point={points.N} 
-              active={activePoint.id === 'N'} 
-              pos="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" 
-              labelPos="-top-10 md:-top-12"
-              onHover={() => handleUpdateInfo(points.N)}
-            />
-            <CompassNode 
-              point={points.E} 
-              active={activePoint.id === 'E'} 
-              pos="top-1/2 right-0 translate-x-1/2 -translate-y-1/2" 
-              labelPos="-right-8 md:-right-10"
-              onHover={() => handleUpdateInfo(points.E)}
-            />
-            <CompassNode 
-              point={points.S} 
-              active={activePoint.id === 'S'} 
-              pos="bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" 
-              labelPos="-bottom-10 md:-bottom-12"
-              onHover={() => handleUpdateInfo(points.S)}
-            />
-            <CompassNode 
-              point={points.W} 
-              active={activePoint.id === 'W'} 
-              pos="top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" 
-              labelPos="-left-8 md:-left-10"
-              onHover={() => handleUpdateInfo(points.W)}
-            />
+          {/* Nodes with responsive positioning */}
+<CompassNode 
+  point={points.N} 
+  active={activePoint.id === 'N'} 
+  pos="top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" 
+  labelPos="-top-8 md:-top-12" // Slightly closer on mobile
+  onHover={() => handleUpdateInfo(points.N)}
+/>
+<CompassNode 
+  point={points.E} 
+  active={activePoint.id === 'E'} 
+  pos="top-1/2 right-0 translate-x-1/2 -translate-y-1/2" 
+  labelPos="-right-5 md:-right-10" // Changed from -right-8 to -right-5
+  onHover={() => handleUpdateInfo(points.E)}
+/>
+<CompassNode 
+  point={points.S} 
+  active={activePoint.id === 'S'} 
+  pos="bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2" 
+  labelPos="-bottom-8 md:-bottom-12" // Slightly closer on mobile
+  onHover={() => handleUpdateInfo(points.S)}
+/>
+<CompassNode 
+  point={points.W} 
+  active={activePoint.id === 'W'} 
+  pos="top-1/2 left-0 -translate-x-1/2 -translate-y-1/2" 
+  labelPos="-left-5 md:-left-10" // Changed from -left-8 to -left-5
+  onHover={() => handleUpdateInfo(points.W)}
+/>
           </div>
 
           {/* Info Box */}

@@ -1,53 +1,60 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, BookOpen, Armchair, Brain, Stethoscope } from 'lucide-react';
-
+import SOWRI from '../assets/bala.jpeg'
+import BALA from '../assets/balu.jpeg'
+import MEHER from '../assets/meher  image.png'
+import PAVAN from '../assets/pavan.jpeg';
+import PARDHA from '../assets/parda.jpeg';
+import BHAWANI from '../assets/bhavani.jpeg'
+import KAVITHA from '../assets/kavitha.jpeg';
+import VISHNU from '../assets/vishnu.jpeg';
 const TEAM_MEMBERS = [
   {
     name: 'Dr. Meher P Chinthamuneedi',
     role: 'Founder & Project Lead',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/02/Gemini_Generated_Image_jzmtt9jzmtt9jzmt.png',
+    img:MEHER,
     quote: '"Empower through knowledge, innovate with purpose, and serve with compassion."',
   },
   {
     name: 'Dr. Bala Chundru',
     role: 'General Surgeon & Family Medicine',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/balu.jpeg',
+    img: BALA,
     quote: 'Over 35 years of clinical experience delivering compassionate, patient-centered care.',
   },
   {
     name: 'Dr Sowri Bala',
     role: 'Hospital Administration',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-22-at-1.38.34-PM.jpeg',
+    img: SOWRI,
     quote: '"Service to mankind is service to GOD."',
   },
   {
     name: 'Dr. Pavan Gutta',
     role: 'Family Physician',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/pavan.jpeg',
+    img: PAVAN,
     quote: '"Dedicated in purpose, Determined in action, Disciplined in pursuit."',
   },
   {
     name: 'Pardha Pothana',
     role: 'Director, Chip Design',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/parda.jpeg',
+    img: PARDHA,
     quote: '"Engineer for Scale, Dream What the World Needs, Build What\'s Next."',
   },
   {
     name: 'Mrs. Bhawani Pothana',
     role: 'Nutrition Expert & Counsellor',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/bhavani.jpeg',
+    img: BHAWANI,
     quote: '"Compassionate Professional Bridging Generations."',
   },
   {
     name: 'Kavitha',
     role: 'IT & Social Impact Leader',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/kavitha.jpeg',
+    img: KAVITHA,
     quote: '"Sustainable Development with Social Responsibility."',
   },
   {
     name: 'Mr. B Vishnu Vardhan',
     role: 'Software & Philanthropy',
-    img: 'https://hillsviewassistedliving.com/wp-content/uploads/2026/01/vishnu.jpeg',
+    img: VISHNU,
     quote: '"The elderly are a source of wisdom, experience, and stability."',
   },
 ];

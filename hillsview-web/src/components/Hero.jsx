@@ -1,12 +1,13 @@
 import React from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
 import { scrollToId } from '../scrollUtils';
+import HERO from '../assets/mainimage.jpeg'
 
 function Hero() {
   return (
     <header
       id="top"
-      className="relative min-h-screen flex pb-20 items-center justify-center pt-20 lg:pt-24 overflow-hidden"
+      className="relative sm:pb-[50px] min-h-screen flex pb-20 items-center justify-center pt-20 lg:pt-24 overflow-hidden"
     >
       <div className="absolute left-10 bottom-20 opacity-20 pointer-events-none animate-float-delayed hidden md:block z-10" style={{ transform: 'translateY(-15px)' }}>
           <svg width="200" height="200" viewBox="0 0 100 100" stroke="#BFA15F" fill="none" strokeWidth="0.5">
@@ -52,7 +53,7 @@ function Hero() {
             <div className="absolute inset-[16px] z-20 pointer-events-none border-[8px] border-[#3E2723] shadow-[inset_2px_2px_10px_rgba(0,0,0,0.5)]" />
 
             <img
-              src="https://hillsviewassistedliving.com/wp-content/uploads/2026/01/mainimage.jpeg"
+              src={HERO}
               className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-500 hover:scale-105"
               alt="Luxury Resort View"
             />
@@ -303,10 +304,10 @@ function Hero() {
 
     {/* Floating card – with icon and better positioning */}
     <div
-      className="absolute floating-point -bottom-18 -left-10 sm:left-8 md:-left-85 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
+      className="absolute  floating-point -bottom-18 -left-10 sm:left-8 md:-left-85 lg:-left-10 z-20 bg-white p-4 sm:p-5 rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.15)] border-2 border-luxury-gold/50 animate-float hover:scale-105 transition-all duration-300"
       style={{ animationDelay: '1s' }}
     >
-      <div className="flex items-center gap-3 sm:gap-4">
+      <div className="flex items-center gap-3  sm:gap-4">
         <div className="bg-gradient-to-br from-luxury-teal to-[#1a3d38] p-3 sm:p-3.5 rounded-xl text-white shadow-lg shadow-teal-900/20 ring-1 ring-white/50 shrink-0">
           <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
         </div>
@@ -330,5 +331,4 @@ function Hero() {
 }
 
 export default Hero;
-
 
