@@ -7,7 +7,7 @@ function Hero() {
   return (
     <header
       id="top"
-      className="relative sm:pb-[50px] min-h-screen flex pb-20 items-center justify-center pt-20 lg:pt-24 overflow-hidden"
+      className="relative  min-h-screen flex pb-20 items-center justify-center pt-20 lg:pt-24 overflow-hidden"
     >
       <div className="absolute left-10 bottom-20 opacity-20 pointer-events-none animate-float-delayed hidden md:block z-10" style={{ transform: 'translateY(-15px)' }}>
           <svg width="200" height="200" viewBox="0 0 100 100" stroke="#BFA15F" fill="none" strokeWidth="0.5">
@@ -331,4 +331,5 @@ function Hero() {
 }
 
 export default Hero;
+
 
