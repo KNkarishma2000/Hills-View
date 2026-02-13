@@ -57,6 +57,11 @@ function Hero() {
               className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-500 hover:scale-105"
               alt="Luxury Resort View"
             />
+<div className="absolute bottom-8 right-8 pointer-events-none z-10">
+  <span className="text-white text-2xl md:text-3xl font-bold opacity-30 select-none">
+    hval.co.in
+  </span>
+</div>
 
             <div className="absolute bottom-12 left-12 bg-white/90 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg z-30">
               <p className="text-luxury-text font-serif text-base font-bold flex items-center gap-2">
@@ -331,5 +336,6 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
