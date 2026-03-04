@@ -168,7 +168,7 @@ function Team() {
               Concept "One-Stop Shop"
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-luxury-text mb-4">
-              Your Membership to Better Living
+              Your Membership for Better Living
             </h2>
             <p className="text-lg md:text-xl text-luxury-sub max-w-2xl mx-auto">
               We&apos;ve reimagined care as a continuum of lifestyle choices. Select the level of
@@ -233,4 +233,5 @@ function Team() {
 }
 
 export default Team;
+
 
