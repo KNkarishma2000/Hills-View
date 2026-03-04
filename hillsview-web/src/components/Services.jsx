@@ -93,7 +93,7 @@ function Services() {
                 </div>
 
                 <h4 className="text-xl font-bold font-serif text-[#1C1917] relative z-10 group-hover:text-[#2C5F58] transition-colors">
-                  Independent Resort style living
+                  Independent living
                 </h4>
                 <p className="text-sm text-[#44403C] mt-2 leading-relaxed relative z-10">
                   A vibrant, revitalised living space for independent living
@@ -272,3 +272,4 @@ function Services() {
 }
 
 export default Services;
+
