@@ -183,7 +183,7 @@ function Team() {
                 <Armchair className="w-8 h-8" />
               </div>
               <h3 className="font-serif text-2xl text-luxury-text font-bold mb-2 relative z-10">
-                Resort Living
+                Independent Living
               </h3>
               <p className="text-luxury-sub mb-6 leading-relaxed text-sm relative z-10">
                 Designed for autonomy. Enjoy your own resort-style apartment availing well thought
@@ -233,3 +233,4 @@ function Team() {
 }
 
 export default Team;
+
