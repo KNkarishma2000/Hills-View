@@ -318,10 +318,10 @@ function Hero() {
         </div>
         <div>
           <p className="text-[9px] sm:text-[10px] font-extrabold uppercase tracking-widest text-luxury-gold mb-1 leading-tight">
-            Living Standard
+            Independent
           </p>
           <p className="text-base sm:text-xl font-serif font-bold text-luxury-text tracking-wide leading-none">
-            Resort-Class
+            Living
           </p>
         </div>
       </div>
@@ -336,6 +336,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
