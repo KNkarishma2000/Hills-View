@@ -25,7 +25,7 @@ function About() {
             </h2>
             <p className="text-lg md:text-xl text-luxury-sub leading-relaxed">
               To Discover a higher standard of living with a motto to respect , revive and rekindle
-              golden years of life, Hillsview is a luxury assisted-living retreat where aging is
+              golden years of life, Hillsview is a  assisted-living retreat where aging is
               celebrated with dignity, comfort, and purpose, combining resort-style living and
               integrated healthcare under one roof....
             </p>
@@ -42,3 +42,4 @@ function About() {
 }
 
 export default About;
+
