@@ -248,7 +248,7 @@ function Hero() {
           fontSize="18"
           fontWeight="700"
         >
-          Resort
+          Independent
         </text>
         <text
           x="200"
@@ -336,6 +336,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
