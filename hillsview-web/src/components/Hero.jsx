@@ -321,7 +321,7 @@ function Hero() {
             Living Standard
           </p>
           <p className="text-base sm:text-xl font-serif font-bold text-luxury-text tracking-wide leading-none">
-            Independent Living
+            Resort Living
           </p>
         </div>
       </div>
@@ -336,6 +336,7 @@ function Hero() {
 }
 
 export default Hero;
+
 
 
 
